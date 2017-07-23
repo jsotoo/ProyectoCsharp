@@ -1,0 +1,67 @@
+CREATE PROCEDURE InsertarDependencias
+@DepNombre varchar (80)
+AS
+BEGIN
+INSERT INTO ca_tbdependencias VALUES (@DepNombre)
+END
+
+
+
+
+
+CREATE PROCEDURE InsertarEmpleados
+@EmpDocumento float,
+@EmpNombres varchar(80),
+@EmpApellidos varchar(80),
+@EmpDependencia varchar(80),
+@EmpCargo varchar(120),
+@EmpObservaciones varchar(MAX),
+@EmpFoto varchar(120)
+
+AS
+BEGIN
+INSERT INTO ca_tbempleados VALUES (@EmpDocumento,@EmpNombres,@EmpApellidos,@EmpDependencia,@EmpCargo,@EmpObservaciones,@EmpFoto);
+END
+
+
+
+
+
+CREATE PROCEDURE InsertarEmpleadosElementos
+
+@Id int,
+@EmpEleDocumento float,
+@EmpEleSerial varchar(50),
+@EmpEleDetalle varchar(MAX),
+@EmpEleFecha Date
+
+AS
+BEGIN
+
+INSERT INTO ca_tbempleadoselementos VALUES (@EmpEleDocumento,@EmpEleSerial,@EmpEleDetalle,@EmpEleFecha);
+
+
+END
+
+
+
+
+
+CREATE PROCEDURE InsertarIngresoEmpleados
+
+@EmpDocumento float,
+@EmpFecha Date,
+@EmpHoraEntrada1 time(7),
+@EmpHoraSalida1 time(7),
+@EmpHoraEntrada2 time(7),
+@EmpHoraSalida2 time(7),
+@EmpObservaciones varchar(MAX),
+@EmpUsuRegistra varchar(50)
+AS
+BEGIN
+INSERT INTO ca_tbingresosempleados VALUES (@EmpDocumento,@EmpFecha,@EmpHoraEntrada1,@EmpHoraSalida1,@EmpHoraEntrada2,@EmpHoraSalida2,@EmpObservaciones,@EmpUsuRegistra)
+END
+
+
+
+

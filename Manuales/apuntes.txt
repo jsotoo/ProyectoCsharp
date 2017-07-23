@@ -1,0 +1,37 @@
+DDL-Data Definition Language
+DCL-Data Control Language
+DML-Data Manipulation Lenguage
+
+SQL- Structure Query Lenguaje
+
+DDL-- lenguaje que se dedica a la Distribución de los datos 
+Crear tablas, crear bases de datos, Borrar tablas, borrar bases de datos
+
+DCL-- Darle atributos a los usuarios, permisos de ejecución sobre la base de datos
+DML-- manipulacion de los datos Delete,insert,select,update
+
+
+
+Especificación de identidad --> Identidad ==> SI el atributo es autonumerico
+
+Distinct --- Quitar duplicados
+
+
+consultas multitabla
+
+INNER JOIN ----> Registro en ambas tablas
+LEFT JOIN----> Registro en la tabla izquierda
+RIGHT JOIN ----> registro en la tabla derecha
+
+
+
+--OUTER JOIN muestra todos los registros y los que no estan muestra NULL
+
+full outer join
+left outer join
+right outer join
+
+
+
+
+Select * from TABLAI INNER JOIN TABALA2 ON TABLA1.CAMPO = TABLA2.CAMPO

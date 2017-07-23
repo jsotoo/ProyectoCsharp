@@ -1,0 +1,130 @@
+Consulta almacenada en la BD de un servidor-----PROCEDIMIENTO ALMACENADO
+
+ALTER PROCEDURE participantesXzona
+AS
+BEGIN
+
+SELECT  Zona, COUNT (Zona) as 'Numero de Participantes'
+FROM fc_tbparticipantes
+GROUP BY  Zona
+
+END
+
+EXECUTE participantesXzona
+
+
+
+
+CREATE PROCEDURE participantesXmunicipio
+AS
+BEGIN
+
+SELECT  Municipio, COUNT (Municipio) as 'Numero de Participantes'
+FROM fc_tbparticipantes
+GROUP BY  Municipio
+
+END
+
+EXECUTE participantesXmunicipio
+
+
+
+
+
+
+CREATE PROCEDURE participantesXcoordinador
+AS
+BEGIN
+
+SELECT  DocumentoCoordinador, COUNT (CodigoParticipante) as 'Numero de Participantes'
+FROM fc_tbparticipantes
+GROUP BY  DocumentoCoordinador
+
+END
+
+EXECUTE participantesXcoordinador
+
+
+
+
+
+CREATE PROCEDURE participantesXgestor
+AS
+BEGIN
+
+SELECT  DocumentoGestor, COUNT (CodigoParticipante) as 'Numero de Participantes'
+FROM fc_tbparticipantes
+GROUP BY  DocumentoGestor
+
+END
+
+EXECUTE participantesXgestor
+
+
+
+
+ALTER PROCEDURE participantesActivos
+AS
+BEGIN
+
+SELECT Estado, COUNT (CodigoParticipante) as 'Numero de Participantes'
+FROM fc_tbparticipantes 
+WHERE Estado ='ACTIVO'
+GROUP BY  Estado
+
+END
+
+EXECUTE participantesActivos
+
+
+CREATE PROCEDURE participantesInactivos
+AS
+BEGIN
+
+SELECT Estado, COUNT (CodigoParticipante) as 'Numero de Participantes'
+FROM fc_tbparticipantes 
+WHERE Estado ='INACTIVO'
+GROUP BY  Estado
+
+END
+
+EXECUTE participantesInactivos
+
+
+
+
+CREATE PROCEDURE participantesRetirados
+AS
+BEGIN
+
+SELECT Estado, COUNT (CodigoParticipante) as 'Numero de Participantes'
+FROM fc_tbparticipantes 
+WHERE Estado ='RETIRADO'
+GROUP BY  Estado
+
+END
+
+EXECUTE participantesRetirados
+
+
+
+
+
+ALTER PROCEDURE TotalNivelEducativo
+AS
+BEGIN
+
+SELECT NivelEducativo, COUNT (NivelEducativo) as 'Total'
+FROM fc_encuestabase 
+GROUP BY NivelEducativo
+ORDER BY NivelEducativo ASC
+
+END
+
+EXECUTE TotalNivelEducativo
+
+
+
+
+
+

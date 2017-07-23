@@ -1,0 +1,335 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data.SqlClient;
+
+namespace ClasesElectivaV
+{
+    public partial class frmInicio : Form
+    {
+        Funciones f = new Funciones();
+        int fila = 0;
+        Boolean nuereg = false;
+        Boolean edireg = false;
+
+        public frmInicio()
+        {
+            InitializeComponent();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmInicio_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                Conectar();
+            }
+
+            catch (SqlException err)
+            {
+                MessageBox.Show(err.Message);
+            }
+        }
+
+        private void Conectar()
+        {
+            f.Consulta = "Select * from TbUsuario";
+            f.DA = new SqlDataAdapter(f.Consulta, f.CadenaConexion);
+            f.DT = new DataTable();
+            f.DA.Fill(f.DT);
+
+            if (f.DT.Rows.Count > 0)
+            {
+                btnprimero_Click(null, null);
+            }
+        }
+
+        private void btnprimero_Click(object sender, EventArgs e)
+        {
+            fila = 0;
+            mostrarDatos(fila);
+            bloquearControles(true, false, true, false, false, true, true, true, true, true, true, true);
+          
+
+        }
+
+        private void bloquearControles(Boolean a, Boolean b, Boolean c, Boolean d, Boolean e, Boolean f, Boolean g, Boolean h, Boolean i, Boolean j, Boolean k, Boolean l)
+        {
+            btnnuevo.Enabled = a;
+            btngrabar.Enabled = b;
+            btneditar.Enabled = c;
+            btnactualizar.Enabled = d;
+            btncancelar.Enabled = e;
+            btneliminar.Enabled = f;
+            btnprimero.Enabled = g;
+            btnanterior.Enabled = h;
+            btnSiguiente.Enabled = i;
+            btnUltimo.Enabled = j;
+            btnBuscar.Enabled = k;
+            btnsalir.Enabled = l;
+
+        }
+
+        private void desbloquear(Boolean a, Boolean b, Boolean c,Boolean d)
+        {
+            btnprimero.Enabled= a;
+            btnanterior.Enabled = b;
+            btnSiguiente.Enabled = c;
+            btnUltimo.Enabled = d;
+
+        }
+
+        private void mostrarDatos(int fil)
+            {
+                f.DR = f.DT.Rows[fil];
+                txtnudocu.Text = f.DR.ItemArray[0].ToString();
+                txtnombre.Text = f.DR.ItemArray[1].ToString();
+                txtapellido.Text = f.DR.ItemArray[2].ToString();
+                txtcorreo.Text = f.DR.ItemArray[3].ToString();
+                listaperfil.Text = f.DR.ItemArray[4].ToString();
+                txtnombreusuario.Text = f.DR.ItemArray[5].ToString();
+                txtpassword.Text = f.DR.ItemArray[6].ToString();
+                listaestado.Text = f.DR.ItemArray[7].ToString();
+            }
+
+        private void btnsalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnnuevo_Click(object sender, EventArgs e)
+        {
+            limpiarcampos();
+            desbloquearcampos();
+            bloquearControles(false, true, false, false, true, false, false, false, false, false, false, true);
+            txtnudocu.Focus();
+            nuereg = true;
+        }
+
+        private bool IsNumeric(string num)
+        {
+            try
+            {
+                double x = Convert.ToDouble(num);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+        private void limpiarcampos()
+        {
+            if(!IsNumeric(txtnudocu.Text))
+            {
+                MessageBox.Show("Debe ingresar numeros");
+
+            }
+            else
+            {
+                txtnudocu.Text = "";
+            }
+            txtnombre.Text = "";
+            txtapellido.Text = "";
+            txtcorreo.Text = "";
+            listaperfil.Text = "";
+            txtnombreusuario.Text = "";
+            txtpassword.Text = "";
+            listaestado.Text = "";
+
+
+        }
+
+
+
+        private void desbloquearcampos()
+        {
+            txtnudocu.ReadOnly = false;
+            txtnombreusuario.ReadOnly = false;
+            txtnombre.ReadOnly = false;
+            txtapellido.ReadOnly = false;
+            txtcorreo.ReadOnly = false;
+            txtnombreusuario.ReadOnly = false;
+            txtpassword.ReadOnly = false;
+            
+        }
+
+        private void btngrabar_Click(object sender, EventArgs e)
+        {
+            try {
+                
+                if (txtnudocu.Text == "" || txtnombre.Text == "" || txtapellido.Text == "" || txtcorreo.Text == "" || listaperfil.Text == "" || txtnombreusuario.Text == "" || txtpassword.Text == "" || listaestado.Text == "")
+                {
+                    MessageBox.Show("Faltan datos por llenar");
+                }
+                else
+                {
+                    f.CadIns = "INSERT TbUsuario VALUES(" + txtnudocu.Text + ",'" + txtnombre.Text + "','" + txtapellido.Text + "','" + txtcorreo.Text + "','" + listaperfil.Text + "','" + txtnombreusuario.Text + "','" + txtpassword.Text + "','" + listaestado.Text + "');";
+                    f.operarRegistro(f.CadIns);
+                    nuereg = false;
+                    MessageBox.Show("Ingreso correcto");
+                    Conectar();
+                    btnUltimo_Click(null, null);
+                    bloquearControles(true, false, true, false, false, true, true, true, true, true, true, true);
+                }
+            }
+            catch(SqlException err)
+            {
+                MessageBox.Show(err.Message);
+            }
+        }
+
+        private void btnUltimo_Click(object sender, EventArgs e)
+        {
+            fila = f.DT.Rows.Count-1;
+            mostrarDatos(fila);
+        }
+
+        private void btneditar_Click(object sender, EventArgs e)
+        {
+            desbloquearcampos();
+            bloquearControles(false, false, false, true, true, false, false, false, false, false, false, true);
+            edireg = true;
+        }
+
+        private void btnactualizar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f.CadIns = "UPDATE TbUsuario SET UsuNombres='"+txtnombre.Text+
+                    "', UsuApellidos='"+ txtapellido.Text +
+                    "', UsoCorreo='"+ txtcorreo.Text+
+                    "',UsuPerfil='"+ listaperfil.Text+
+                    "',UsuLogin='"+ txtnombreusuario.Text+
+                    "',UsuPassword='"+txtpassword.Text+"',UsuEstado='"+ listaestado.Text+"'" + "WHERE UsuDocumento='"+txtnudocu.Text+"'" ;
+                f.operarRegistro(f.CadIns);
+                edireg = false;
+                MessageBox.Show("Registro actualizado");
+                Conectar();
+                bloquearControles(true, false, true, false, false, true, true, true, true, true, true, true);
+            }
+            catch (SqlException err)
+            {
+                MessageBox.Show(err.Message);
+            }
+
+
+
+
+
+
+        }
+
+        private void btncancelar_Click(object sender, EventArgs e)
+        {
+            if(nuereg==true || edireg==true)
+            {
+                if(MessageBox.Show("Actualmente esta editando o agregando un nuevo registro" + "Desea realmente cancelar?","Electiva V",MessageBoxButtons.YesNo,MessageBoxIcon.Error)== DialogResult.Yes)
+                {
+                    Conectar();
+                    nuereg = false;
+                    edireg = false;
+                }
+            }
+        }
+
+        private void btneliminar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Desea realmente eliminar el registro? " , "Electiva V", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
+            {
+                try
+                {
+                    f.Consulta = "DELETE FROM TbUsuario WHERE "+"UsuDocumento='"+txtnudocu.Text+"'";
+                    f.operarRegistro(f.Consulta);
+                    MessageBox.Show("Registro Eliminado");
+                    Conectar();
+                }catch(SqlException err)
+                {
+                    MessageBox.Show(err.Message);
+                }
+                
+            }
+        }
+
+        private void btnanterior_Click(object sender, EventArgs e)
+        {
+            fila = fila - 1;
+            if(fila >= 0)
+            {
+                mostrarDatos(fila);
+            }
+            else
+            {
+                fila = 0;
+                mostrarDatos(fila);
+            }
+        }
+
+        private void btnSiguiente_Click(object sender, EventArgs e)
+        {
+            fila = fila + 1;
+            if (fila < f.DT.Rows.Count)
+            {
+                mostrarDatos(fila);
+            }
+            else
+            {
+                fila = f.DT.Rows.Count - 1;
+                mostrarDatos(fila);
+            }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            
+            String SearSQL= Microsoft.VisualBasic.Interaction.InputBox("Digite Documento a Buscar");
+            f.Consulta = "Select * from TbUsuario where UsuDocumento=" + SearSQL;
+            f.DA = new SqlDataAdapter(f.Consulta, f.CadenaConexion);
+            f.DT = new DataTable();
+            f.DA.Fill(f.DT);
+            if(f.DT.Rows.Count > 0)
+            {
+                mostrarDatos(0);
+                desbloquear(true,true,true,true);
+
+            }
+            else
+            {
+                MessageBox.Show("No se encuentra el documento");
+            }
+
+
+            
+
+
+
+
+        }
+
+        private void frmInicio_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (nuereg == true || edireg == true)
+            {
+                if (MessageBox.Show("Actualmente esta editando o agregando un nuevo registrar Desea realmente salir?", "Electiva V", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
+                {
+                    e.Cancel = false;
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
+            }
+
+        }
+    }
+    }

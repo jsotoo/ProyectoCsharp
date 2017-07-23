@@ -1,0 +1,28 @@
+CREATE TRIGGER Ejemplo
+ON fc_tbmodulosgestores
+AFTER UPDATE AS
+if (UPDATE (HoraInicio) or UPDATE(HoraFinal))
+
+begin
+
+DECLARE @CALCULO TIME;
+
+SELECT @CALCULO =convert(datetime, fc.HORAINICIO ,108)- convert(datetime, fc.HoraFinal ,108) 
+FROM fc_tbmodulosgestores fc 
+update fc_tbmodulosgestores set Duracion = @CALCULO
+from fc_tbmodulosgestores 
+
+INSERT INTO TbLog 
+SELECT CONCAT('Se modifico las horas',inserted.HoraInicio,inserted.HoraFinal), @CALCULO
+
+FROM inserted
+
+
+end;
+
+
+INSERT INTO fc_tbmodulosgestores VALUES ('AAA',12353,2342,9,'','03:00:00','06:00:00','03:00:00')
+UPDATE fc_tbmodulosgestores SET HoraInicio= '03:00:00' WHERE CodigoParticipante='AAA'
+
+SELECT * FROM TbLog
+

@@ -1,0 +1,9 @@
+Management Studio -----------SQL
+Autenticación de Windows ---- No recomendable, autenticación SQL-Server (Usuario y contraseña)
+Pasos
+Seguridad----- Nuevo inicio de sesion ----- Autenticacion de sql server --- User y Password
+
+nvarchar (80) en memoria aparte 80 caracteres ---> 35 caracteres y los otros no los ocupa
+Varchar(80) me ocupa en memoria los 80 caracteres
+Text ---No hay limite especifico
+
