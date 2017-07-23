@@ -1,0 +1,58 @@
+c:\users\cobra\onedrive\documentos\visual studio 2015\Projects\ControlAcceso\ControlAcceso\bin\Debug\ControlAcceso.exe.config
+c:\users\cobra\onedrive\documentos\visual studio 2015\Projects\ControlAcceso\ControlAcceso\bin\Debug\ControlAcceso.exe
+c:\users\cobra\onedrive\documentos\visual studio 2015\Projects\ControlAcceso\ControlAcceso\bin\Debug\ControlAcceso.pdb
+c:\users\cobra\onedrive\documentos\visual studio 2015\Projects\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.csprojResolveAssemblyReference.cache
+c:\users\cobra\onedrive\documentos\visual studio 2015\Projects\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.Properties.Resources.resources
+c:\users\cobra\onedrive\documentos\visual studio 2015\Projects\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.csproj.GenerateResource.Cache
+c:\users\cobra\onedrive\documentos\visual studio 2015\Projects\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.exe
+c:\users\cobra\onedrive\documentos\visual studio 2015\Projects\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.pdb
+c:\users\cobra\onedrive\documentos\visual studio 2015\Projects\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.frmInicio.resources
+c:\users\cobra\onedrive\documentos\visual studio 2015\Projects\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.frmLogin.resources
+C:\Users\cobra\onedrive\documentos\visual studio 2015\Projects\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.frmMenu.resources
+C:\Users\sthefany\Documents\NET 2\PRoyectoSegundoCorte\ControlAcceso\ControlAcceso\bin\Debug\ControlAcceso.exe.config
+C:\Users\sthefany\Documents\NET 2\PRoyectoSegundoCorte\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.exe
+C:\Users\sthefany\Documents\NET 2\PRoyectoSegundoCorte\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.pdb
+C:\Users\sthefany\Documents\NET 2\PRoyectoSegundoCorte\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.csprojResolveAssemblyReference.cache
+C:\Users\sthefany\Documents\NET 2\PRoyectoSegundoCorte\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.frmInicio.resources
+C:\Users\sthefany\Documents\NET 2\PRoyectoSegundoCorte\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.frmLogin.resources
+C:\Users\sthefany\Documents\NET 2\PRoyectoSegundoCorte\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.frmMenu.resources
+C:\Users\sthefany\Documents\NET 2\PRoyectoSegundoCorte\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.frmRegistroEmpleados.resources
+C:\Users\sthefany\Documents\NET 2\PRoyectoSegundoCorte\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.Properties.Resources.resources
+C:\Users\sthefany\Documents\NET 2\PRoyectoSegundoCorte\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.csproj.GenerateResource.Cache
+C:\Users\sthefany\Documents\NET 2\PRoyectoSegundoCorte\ControlAcceso\ControlAcceso\bin\Debug\ControlAcceso.exe
+C:\Users\sthefany\Documents\NET 2\PRoyectoSegundoCorte\ControlAcceso\ControlAcceso\bin\Debug\ControlAcceso.pdb
+C:\Users\cobra\Dropbox\8vo Semestre\netII\ControlAcceso\ControlAcceso\bin\Debug\ControlAcceso.exe.config
+C:\Users\cobra\Dropbox\8vo Semestre\netII\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.exe
+C:\Users\cobra\Dropbox\8vo Semestre\netII\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.pdb
+C:\Users\cobra\Dropbox\8vo Semestre\netII\ControlAcceso\ControlAcceso\bin\Debug\ControlAcceso.exe
+C:\Users\cobra\Dropbox\8vo Semestre\netII\ControlAcceso\ControlAcceso\bin\Debug\ControlAcceso.pdb
+C:\Users\cobra\Dropbox\8vo Semestre\netII\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.csprojResolveAssemblyReference.cache
+C:\Users\cobra\Dropbox\8vo Semestre\netII\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.frmInicio.resources
+C:\Users\cobra\Dropbox\8vo Semestre\netII\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.frmLogin.resources
+C:\Users\cobra\Dropbox\8vo Semestre\netII\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.frmMenu.resources
+C:\Users\cobra\Dropbox\8vo Semestre\netII\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.frmRegistroEmpleados.resources
+C:\Users\cobra\Dropbox\8vo Semestre\netII\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.Properties.Resources.resources
+C:\Users\cobra\Dropbox\8vo Semestre\netII\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.csproj.GenerateResource.Cache
+C:\Users\windows\Desktop\control acceso\ControlAcceso\ControlAcceso\bin\Debug\ControlAcceso.exe.config
+C:\Users\windows\Desktop\control acceso\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.exe
+C:\Users\windows\Desktop\control acceso\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.pdb
+C:\Users\windows\Desktop\control acceso\ControlAcceso\ControlAcceso\bin\Debug\ControlAcceso.exe
+C:\Users\windows\Desktop\control acceso\ControlAcceso\ControlAcceso\bin\Debug\ControlAcceso.pdb
+C:\Users\windows\Desktop\control acceso\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.csprojResolveAssemblyReference.cache
+C:\Users\windows\Desktop\control acceso\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.frmInicio.resources
+C:\Users\windows\Desktop\control acceso\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.frmLogin.resources
+C:\Users\windows\Desktop\control acceso\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.frmMenu.resources
+C:\Users\windows\Desktop\control acceso\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.frmRegistroEmpleados.resources
+C:\Users\windows\Desktop\control acceso\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.Properties.Resources.resources
+C:\Users\windows\Desktop\control acceso\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.csproj.GenerateResource.Cache
+C:\Users\windows\Desktop\control acceso\ControlAcceso\ControlAcceso\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\windows\Desktop\control acceso\ControlAcceso\ControlAcceso\bin\Debug\AForge.Video.dll
+C:\Users\windows\Desktop\control acceso\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.frmIngresoEmpleaos.resources
+C:\Users\windows\Desktop\control acceso\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.frmRegistroVisitantes.resources
+C:\Users\windows\Desktop\control acceso\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.frmIngresoVisitantes.resources
+C:\Users\windows\Desktop\control acceso\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.frmelementosempleados.resources
+C:\Users\windows\Desktop\control acceso\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.frmUsuarios.resources
+C:\Users\windows\Desktop\control acceso\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.frmDependencias.resources
+C:\Users\windows\Desktop\control acceso\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.frmBackUp.resources
+C:\Users\windows\Desktop\control acceso\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.frmRestaurarBD.resources
+C:\Users\windows\Desktop\control acceso\ControlAcceso\ControlAcceso\obj\Debug\ControlAcceso.frmElementosVisitantes.resources

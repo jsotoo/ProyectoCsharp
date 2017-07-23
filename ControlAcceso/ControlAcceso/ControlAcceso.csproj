@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9516CD9C-48E9-41A4-AD49-4B2B767B7481}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ControlAcceso</RootNamespace>
+    <AssemblyName>ControlAcceso</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge.Video">
+      <HintPath>..\..\..\..\Documents\librerias\AForge.Video\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>..\..\..\..\Documents\librerias\AForge.Video\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Comandos.cs" />
+    <Compile Include="ControlAcceso1DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ControlAcceso1DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ControlAcceso1DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ControlAcceso1DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ControlAcceso1DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ControlAcceso1DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmBackUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBackUp.Designer.cs">
+      <DependentUpon>frmBackUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDependencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDependencias.Designer.cs">
+      <DependentUpon>frmDependencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmelementosempleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmelementosempleados.Designer.cs">
+      <DependentUpon>frmelementosempleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmElementosVisitantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmElementosVisitantes.Designer.cs">
+      <DependentUpon>frmElementosVisitantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmIngresoEmpleaos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIngresoEmpleaos.Designer.cs">
+      <DependentUpon>frmIngresoEmpleaos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmIngresoVisitantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIngresoVisitantes.Designer.cs">
+      <DependentUpon>frmIngresoVisitantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInicio.Designer.cs">
+      <DependentUpon>frmInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistroEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistroEmpleados.Designer.cs">
+      <DependentUpon>frmRegistroEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistroVisitantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistroVisitantes.Designer.cs">
+      <DependentUpon>frmRegistroVisitantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRestaurarBD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRestaurarBD.Designer.cs">
+      <DependentUpon>frmRestaurarBD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsuarios.Designer.cs">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Funciones.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sesion.cs" />
+    <EmbeddedResource Include="frmBackUp.resx">
+      <DependentUpon>frmBackUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDependencias.resx">
+      <DependentUpon>frmDependencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmelementosempleados.resx">
+      <DependentUpon>frmelementosempleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmElementosVisitantes.resx">
+      <DependentUpon>frmElementosVisitantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIngresoEmpleaos.resx">
+      <DependentUpon>frmIngresoEmpleaos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIngresoVisitantes.resx">
+      <DependentUpon>frmIngresoVisitantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInicio.resx">
+      <DependentUpon>frmInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistroEmpleados.resx">
+      <DependentUpon>frmRegistroEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistroVisitantes.resx">
+      <DependentUpon>frmRegistroVisitantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRestaurarBD.resx">
+      <DependentUpon>frmRestaurarBD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="ControlAcceso1DataSet.xsc">
+      <DependentUpon>ControlAcceso1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ControlAcceso1DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ControlAcceso1DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ControlAcceso1DataSet.xss">
+      <DependentUpon>ControlAcceso1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ControlAcceso1DataSet1.xsc">
+      <DependentUpon>ControlAcceso1DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ControlAcceso1DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ControlAcceso1DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ControlAcceso1DataSet1.xss">
+      <DependentUpon>ControlAcceso1DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ControlAcceso1DataSet2.xsc">
+      <DependentUpon>ControlAcceso1DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ControlAcceso1DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ControlAcceso1DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ControlAcceso1DataSet2.xss">
+      <DependentUpon>ControlAcceso1DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Imagenes\agenda.png" />
+    <Content Include="Imagenes\exit-1.png" />
+    <Content Include="Imagenes\print.png" />
+    <Content Include="Imagenes\user-6.png" />
+    <Content Include="Imagenes\user.png" />
+    <Content Include="Imagenes\users-1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
